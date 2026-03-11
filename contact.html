@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Doggy Plaza</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background:#f3f4f6; font-family:Arial; }
+    .contact-box {
+      max-width:600px;
+      margin:40px auto;
+      background:#fff;
+      padding:24px;
+      border-radius:14px;
+      box-shadow:0 8px 30px rgba(0,0,0,.08);
+    }
+    .contact-box h2 { margin-top:0; }
+    .contact-box input,
+    .contact-box textarea {
+      width:100%;
+      padding:12px;
+      margin-bottom:12px;
+      border:1px solid #ddd;
+      border-radius:10px;
+      font-size:14px;
+    }
+    .contact-box textarea { min-height:120px; }
+    .btn {
+      padding:12px;
+      width:100%;
+      background:#111827;
+      color:white;
+      border:none;
+      border-radius:10px;
+      font-size:15px;
+      cursor:pointer;
+    }
+    .btn:hover { opacity:0.9; }
+  </style>
+</head>
+
+<body>
+  <div class="contact-box">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+      <input id="cName" type="text" placeholder="Your Name" required />
+      <input id="cEmail" type="email" placeholder="Your Email" required />
+      <textarea id="cMsg" placeholder="Your Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top:15px;">
+      <a href="/">⬅ Back to Home</a>
+    </p>
+  </div>
+
+  <script src="contact.js"></script>
+</body>
+</html>

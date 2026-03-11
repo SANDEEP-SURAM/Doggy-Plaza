@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login</title>
+  <style>
+    body{font-family:Arial;margin:0;background:#f3f4f6;display:flex;min-height:100vh;align-items:center;justify-content:center}
+    .card{width:380px;background:#fff;border-radius:16px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+    h2{margin:0 0 12px}
+    input{width:100%;padding:12px;border:1px solid #ddd;border-radius:12px;margin:8px 0}
+    button{width:100%;padding:12px;border-radius:12px;background:#111827;color:#fff;border:none;font-weight:800;cursor:pointer;margin-top:10px}
+    .small{font-size:13px;color:#6b7280;margin-top:10px}
+    .err{color:#b91c1c;font-size:13px;margin-top:8px;min-height:18px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Admin Login</h2>
+    <input id="u" placeholder="Username" />
+    <input id="p" type="password" placeholder="Password" />
+    <button id="loginBtn">Login</button>
+    <div class="err" id="err"></div>
+    <div class="small">
+      First time? Create admin once using <code>/api/admin/setup</code>.
+    </div>
+  </div>
+
+  <script src="admin-login.js"></script>
+</body>
+</html>

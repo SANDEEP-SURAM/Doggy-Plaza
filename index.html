@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <title>Doggy Plaza</title>  
+    <!-- Bootstrapl CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sticky-top">
+    <!-- TOP INFO BAR -->
+<div class="top-info-bar">
+    <div class="top-left">
+        <span>📞 +91-7702078235</span>
+        <span>✉️ sandeeparjun485@gmail.com</span>
+    </div>
+
+    <div class="top-center">
+        USE WINTER40 GET FLAT 10% OFF ON ORDER ABOVE 1499
+    </div>
+</div>
+
+<!-- Bootstrap JS (Required) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- HEADER -->
+
+<header class="header">
+    <div class="logo">🐾 DOGGY PLAZA</div>
+
+    <input type="text" id="search" placeholder="Search for products...">
+
+<div class="header-links">
+
+  <!-- LOGIN -->
+  <a href="login.html" id="loginLink" class="login-link">
+    <i class="fa-regular fa-user"></i>
+    <span id="loginText">Login</span>
+  </a>
+
+  <a href="wishlist.html">❤️ Wishlist (<span id="wishCount">0</span>)</a>
+  <a href="cart.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+
+</div>
+
+</header>
+
+
+<!-- NAVBAR -->
+<nav class="main-navbar">
+    <a href="index.html">Home</a>
+    <a href="dogfood.html" class="nav-link">Food</a>
+    <a href="accessories.html">Accessories</a>
+
+    <a href="toys.html">Toys</a>
+    <a href="vet.html">Vet</a>
+</nav>
+</div>
+<!-- Carousel Section-->
+ <section class="carousel-section">
+    <div class="container my-4">
+  <div id="carouselExampleIndicators"
+       class="carousel slide"
+       data-bs-ride="carousel"
+       data-bs-interval="3000">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?_gl=1*17lq01a*_ga*NDMzNzc0MDc5LjE3NjgwMDYxMjc.*_ga_8JE65Q40S6*czE3NjgwMDk5MDMkbzIkZzEkdDE3NjgwMDk5MTMkajUwJGwwJGgw" 
+        class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?_gl=1*45tu75*_ga*NDMzNzc0MDc5LjE3NjgwMDYxMjc.*_ga_8JE65Q40S6*czE3NjgwMDk5MDMkbzIkZzEkdDE3NjgwMDk5ODUkajQ0JGwwJGgw" 
+        class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/573293/pexels-photo-573293.jpeg" class="d-block w-100">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</div>
+</section>
+
+<!--Product section-->
+
+<section class="rec-products">
+  <div class="rec-head">
+    <h2>RECOMMENDED PRODUCTS</h2>
+    <p>Must-Haves For Your Pets</p>
+  </div>
+
+  <div class="rec-grid">
+    <!-- Card 1 -->
+    <article class="p-card">
+      <span class="badge">SOLD OUT</span>
+      <div class="p-img">
+        <img src="https://m.media-amazon.com/images/I/61g23-1MC2L._AC_.jpg" alt="Purina SuperCoat Dog Food">
+      </div>
+      <h3 class="p-title">Purina SuperCoat Chicken Adult All Breed Dog Dry Food</h3>
+      <div class="p-price">Rs. 800.00</div>
+      <div class="p-stars">★★★★★</div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="p-card">
+      <span class="badge">12% OFF</span>
+      <div class="p-img">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.F6E2YKIPs8ilsW6buVDzrwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="TopTail Squeezy Treats">
+      </div>
+      <h3 class="p-title">Toptail Squeezy Chicken & Liver Flavour Creamy Cat Treats 60g</h3>
+      <div class="p-price">Rs. 104.00</div>
+      <div class="p-stars">★★★★★</div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="p-card">
+      <span class="badge">16% OFF</span>
+      <div class="p-img">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.ExG9Qw-rO4h0TIRtCijSyQHaHa?w=3317&h=3317&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Royal Canin Fit 32">
+      </div>
+      <h3 class="p-title">Pure Balance Chicken & Rice Flavour Dry Dog Food</h3>
+      <div class="p-price">Rs. 1,612.00</div>
+      <div class="p-stars">★★★★★</div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="p-card">
+      <span class="badge">2x85g</span>
+      <div class="p-img">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41Vapb9LemL.jpg" alt="Felix Salmon in Jelly">
+      </div>
+      <h3 class="p-title">Purina Felix Salmon In Jelly Adult Wet Food 85g</h3>
+      <div class="p-price">Rs. 612.00</div>
+      <div class="p-stars">★★★★★</div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="p-card">
+      <span class="badge">17% OFF</span>
+      <div class="p-img">
+        <img src="https://image.influenster.com/eyJidWNrZXQiOiAiaW5mbHVlbnN0ZXJfcHJvZHVjdGlvbiIsICJrZXkiOiAibWVkaWEvcHJvZHVjdC9pbWFnZS8xX24wUmlNSEcuSlBHIiwgImVkaXRzIjogeyJyb3RhdGUiOiBudWxsLCAicmVzaXplIjogeyJ3aWR0aCI6IDc1MCwgImhlaWdodCI6IDc1MCwgImZpdCI6ICJpbnNpZGUiLCAiYmFja2dyb3VuZCI6IHsiciI6IDEsICJnIjogMSwgImIiOiAxLCAiYWxwaGEiOiAwfSwgIndpdGhvdXRFbmxhcmdlbWVudCI6IHRydWV9fSwgImV4dGVuZCI6IHt9fQ==">
+      </div>
+      <h3 class="p-title">Innova adult bites dog food</h3>
+      <div class="p-price">Rs. 597.00</div>
+      <div class="p-stars">★★★★★</div>
+    </article>
+  </div>
+</section>
+
+
+
+<!-- OUR SERVICES SECTION -->
+<section class="services-section">
+    <h2 class="services-title">
+        <span class="line"></span>
+        Our Services
+        <span class="line"></span>
+    </h2>
+
+    <div class="services-container">
+
+        <!-- Daycare -->
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/3361746/pexels-photo-3361746.jpeg?_gl=1*llw29s*_ga*NDMzNzc0MDc5LjE3NjgwMDYxMjc.*_ga_8JE65Q40S6*czE3NjgwMTk0OTgkbzMkZzEkdDE3NjgwMTk2MjUkajI5JGwwJGgw">
+            <h4>Clothes</h4>
+            <p>
+                Summer Clothes <br/>
+                Winter Clothes <br/>
+                Soft Clothes <br/>
+                Stylish Clothes <br/>
+            </p>
+              
+              
+            <a href="daycare.html" class="learn-btn">LEARN MORE!</a>
+        </div>
+
+        <!-- Boarding -->
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/16652409/pexels-photo-16652409.jpeg?_gl=1*17ioxkj*_ga*NDMzNzc0MDc5LjE3NjgwMDYxMjc.*_ga_8JE65Q40S6*czE3NjgwMTk0OTgkbzMkZzEkdDE3NjgwMTk3NzckajEkbDAkaDA.">
+            <h4>Accessories</h4>
+            <p>
+                Food Bowls <br/>
+                Shoes <br/>
+                Belts <br/>
+                Etc....
+            </p>
+            <a href="boarding.html" class="learn-btn">LEARN MORE!</a>
+        </div>
+
+        <!-- Grooming -->
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/4588019/pexels-photo-4588019.jpeg">
+            <h4>Bathing & Grooming</h4>
+            <p>
+                Body Soaps and Gels <br/>
+                Tooth Paste and Brush <br/>
+                Towels
+            </p>
+            <a href="grooming.html" class="learn-btn">LEARN MORE!</a>
+        </div>
+
+        <!-- Training -->
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/14084426/pexels-photo-14084426.jpeg?_gl=1*kq9tj0*_ga*NDMzNzc0MDc5LjE3NjgwMDYxMjc.*_ga_8JE65Q40S6*czE3NjgwMTk0OTgkbzMkZzEkdDE3NjgwMTk4NjQkajMxJGwwJGgw">
+            <h4>Toys</h4>
+            <p>
+                Soft Toys <br>
+                Balls <br>
+                Drools non-toxic rubber chew bone <br>
+            </p>
+            <a href="training.html" class="learn-btn">LEARN MORE!</a>
+        </div>
+
+    </div>
+</section>
+
+ 
+
+
+
+<!-- About Section -->
+ <section class="about-section">
+
+    <!-- Title -->
+    <div class="about-title">
+        <span class="line"></span>
+        <h2>About Us</h2>
+        <span class="line"></span>
+    </div>
+
+    <!-- Cards -->
+    <div class="about-cards">
+
+        <!-- Card 1 -->
+        <div class="about-card">
+            <img src="https://images.pexels.com/photos/7210263/pexels-photo-7210263.jpeg">
+            <div class="overlay">
+                <h3>Our Purpose</h3>
+                <p>
+                    To provide luxury care and enrichment.<br><br>
+                    To improve quality of life for dogs and their families.<br><br>
+                    To be leaders in pet boarding and pet sitting,
+                    dog grooming, and dog training.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="about-card">
+            <img src="https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg">
+            <div class="overlay">
+                <h3>Core Values</h3>
+                <p>
+                    Integrity in our Actions<br><br>
+                    Consistency in our Services<br><br>
+                    Always Aiming for Excellence
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="about-card">
+            <img src="https://images.pexels.com/photos/4588019/pexels-photo-4588019.jpeg">
+            <div class="overlay">
+                <h3>Meet our Owner</h3>
+                <p>
+                    Learn about the proprietor and the team
+                    that will take care of your pet.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+ 
+    
+
+
+<footer class="footer">
+  <div class="footer-top">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Dog</a></li>
+        <li><a href="#">Traditional Wear</a></li>
+        <li><a href="#">Personalized Items</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h4>Need Help?</h4>
+      <ul>
+        <li><a href="#">Track Your Order</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Return & Refunds</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h4>Trending Links</h4>
+      <ul>
+        <li><a href="toys.html">Dog Toys</a></li>
+        <li><a href="#">Tuxedo Bandana</a></li>
+        <li><a href="#">Rainwear</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h4>Stay Connected</h4>
+      <div class="socials">
+  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+</div>
+
+
+      <h4 class="newsletter-title">Sign up for our newsletter</h4>
+      <form class="newsletter">
+        <input type="email" placeholder="Enter your email address">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2026 Doggy Plaza. All Rights Reserved.</p>
+
+    <div class="payments">
+      <span>VISA</span>
+      <span>MC</span>
+      <span>AMEX</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JavaScript file -->
+<script src="script.js"></script>
+ <script src="product.js"></script>
+ <script src="auth.js"></script>
+
+
+</body>
+</html>

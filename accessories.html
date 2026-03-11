@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doggy Plaza - Accessories</title>
+
+  <!-- Common styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dogfood.css"> <!-- reuse card styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- TOP INFO BAR -->
+<div class="top-info-bar">
+  <div class="top-left">
+    <span>📞 +91-7702078235</span>
+    <span>✉️ sandeeparjun485@gmail.com</span>
+  </div>
+  <div class="top-center">
+    USE WINTER40 GET FLAT 10% OFF ON ORDER ABOVE 1499
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">🐾 DOGGY PLAZA</div>
+
+  <!-- SEARCH -->
+  <input type="text" id="search" placeholder="Search for accessories...">
+
+   <div class="header-links">
+  <a href="login.html" id="loginLink" class="login-link">
+    <i class="fa-regular fa-user"></i>
+    <span id="loginText">Login</span>
+  </a>
+
+  <a href="wishlist.html">❤️ Wishlist (<span id="wishCount">0</span>)</a>
+  <a href="cart.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+</div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="main-navbar">
+  <a href="index.html">Home</a>
+  <a href="dogfood.html">Food</a>
+  <a href="accessories.html" class="active">Accessories</a>
+  <a href="toys.html">Toys</a>
+  <a href="vet.html">Vet</a>
+</nav>
+
+<!-- ACCESSORIES SECTION -->
+<section class="food-section">
+  <div class="container-fluid px-4">
+
+    <div class="section-head">
+      <div>
+        <h2>DOG ACCESSORIES</h2>
+        <p>Comfort, style & care for your pet</p>
+      </div>
+    </div>
+
+    <div class="food-row">
+
+      <!-- Accessory 1 -->
+      <article class="food-card"
+        data-id="a1"
+        data-title="Adjustable Dog Collar"
+        data-price="399"
+        data-img="https://i5.walmartimages.com/seo/KBOOK-Reflective-Dog-Collar-Adjustable-Neoprene-Padded-Dog-Collars-with-Metal-Belt-Buckle-for-Small-Medium-Large-Dogs_b816ff87-2018-40a9-9d14-5b030eaa8dd0.26f0fe54db561dfc6cfe048b255966b2.jpeg">
+
+        <button class="wish-btn" type="button">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <div class="food-img">
+          <img src="https://i5.walmartimages.com/seo/KBOOK-Reflective-Dog-Collar-Adjustable-Neoprene-Padded-Dog-Collars-with-Metal-Belt-Buckle-for-Small-Medium-Large-Dogs_b816ff87-2018-40a9-9d14-5b030eaa8dd0.26f0fe54db561dfc6cfe048b255966b2.jpeg" alt="Dog Collar">
+        </div>
+
+        <h3 class="food-title">Adjustable Dog Collar</h3>
+        <p class="food-sub">Comfort fit • Durable</p>
+
+        <div class="food-price">
+          <span class="new">₹399</span>
+        </div>
+
+        <button class="btn-add add-to-cart">Add to Cart</button>
+      </article>
+
+      <!-- Accessory 2 -->
+      <article class="food-card"
+        data-id="a2"
+        data-title="Nylon Dog Leash"
+        data-price="499"
+        data-img="https://i5.walmartimages.com/seo/KBOOK-Reflective-Dog-Collar-Adjustable-Neoprene-Padded-Dog-Collars-with-Metal-Belt-Buckle-for-Small-Medium-Large-Dogs_b816ff87-2018-40a9-9d14-5b030eaa8dd0.26f0fe54db561dfc6cfe048b255966b2.jpeg">
+
+        <button class="wish-btn" type="button">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <div class="food-img">
+          <img src="https://m.media-amazon.com/images/I/81S1t0ZtzVL.jpg" alt="Dog Leash">
+        </div>
+
+        <h3 class="food-title">Nylon Dog Leash</h3>
+        <p class="food-sub">Strong • Comfortable grip</p>
+
+        <div class="food-price">
+          <span class="new">₹499</span>
+        </div>
+
+        <button class="btn-add add-to-cart">Add to Cart</button>
+      </article>
+
+      <!-- Accessory 3 -->
+      <article class="food-card"
+        data-id="a3"
+        data-title="Stainless Steel Dog Bowl"
+        data-price="299"
+        data-img="https://i5.walmartimages.com/seo/KBOOK-Reflective-Dog-Collar-Adjustable-Neoprene-Padded-Dog-Collars-with-Metal-Belt-Buckle-for-Small-Medium-Large-Dogs_b816ff87-2018-40a9-9d14-5b030eaa8dd0.26f0fe54db561dfc6cfe048b255966b2.jpeg">
+
+        <button class="wish-btn" type="button">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <div class="food-img">
+          <img src="https://m.media-amazon.com/images/I/81iQb8pCJQL.jpg" alt="Dog Bowl">
+        </div>
+
+        <h3 class="food-title">Steel Food Bowl</h3>
+        <p class="food-sub">Anti-skid • Easy clean</p>
+
+        <div class="food-price">
+          <span class="new">₹299</span>
+        </div>
+
+        <button class="btn-add add-to-cart">Add to Cart</button>
+      </article>
+
+      <!-- Accessory 4-->
+      <article class="food-card"
+        data-id="a4"
+        data-title="Stainless Steel Dog Bowl"
+        data-price="299"
+        data-img="https://i5.walmartimages.com/seo/KBOOK-Reflective-Dog-Collar-Adjustable-Neoprene-Padded-Dog-Collars-with-Metal-Belt-Buckle-for-Small-Medium-Large-Dogs_b816ff87-2018-40a9-9d14-5b030eaa8dd0.26f0fe54db561dfc6cfe048b255966b2.jpeg">
+
+        <button class="wish-btn" type="button">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <div class="food-img">
+          <img src="https://i.etsystatic.com/21018330/r/il/bb0424/2546523021/il_1588xN.2546523021_k4me.jpg" alt="Dog Bowl">
+        </div>
+
+        <h3 class="food-title">Summer Dog Clothes Dog Clothing Pet Clothes</h3>
+        <p class="food-sub">Anti-skid • Easy Wash</p>
+
+        <div class="food-price">
+          <span class="new">₹299</span>
+        </div>
+
+        <button class="btn-add add-to-cart">Add to Cart</button>
+      </article>
+
+      <!-- Accessory 5 -->
+      <article class="food-card"
+        data-id="a5"
+        data-title="Stainless Steel Dog Bowl"
+        data-price="299"
+        data-img="https://i5.walmartimages.com/seo/KBOOK-Reflective-Dog-Collar-Adjustable-Neoprene-Padded-Dog-Collars-with-Metal-Belt-Buckle-for-Small-Medium-Large-Dogs_b816ff87-2018-40a9-9d14-5b030eaa8dd0.26f0fe54db561dfc6cfe048b255966b2.jpeg">
+
+        <button class="wish-btn" type="button">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <div class="food-img">
+          <img src="https://i5.walmartimages.com/seo/BT-Bear-Large-Dog-Hawaiian-Costume-Dog-s-Cool-T-Shirts-Summer-Clothes-Shirt-Dogs-Design-Luau-Style-Beach-Camp-Vacation-6XL_ecbe6163-c1d2-4418-a3d4-f8e0e4119055.9a5c98a189796b469d02ca5662036c49.jpeg" alt="Dog Bowl">
+        </div>
+
+        <h3 class="food-title">Large Dog Hawaiian Costume</h3>
+        <p class="food-sub">Anti-skid • Easy Wash</p>
+
+        <div class="food-price">
+          <span class="new">₹299</span>
+        </div>
+
+        <button class="btn-add add-to-cart">Add to Cart</button>
+      </article>
+
+    </div>
+
+<!-- 🔽 NEW ROW BELOW -->
+<div class="food-row">
+<!-- Accessory 6 -->
+<article class="food-card"
+  data-id="a6"
+  data-title="Dog Harness (No Pull)"
+  data-price="799"
+  data-img="https://m.media-amazon.com/images/I/71gQhZ5cVwL._SL1500_.jpg">
+
+  <button class="wish-btn" type="button">
+    <i class="fa-regular fa-heart"></i>
+  </button>
+
+  <div class="food-img">
+    <img src="https://m.media-amazon.com/images/I/71OxZyetoAL._AC_SL1500_.jpg" alt="Dog Harness">
+  </div>
+
+  <h3 class="food-title">Dog Winter Jacket</h3>
+  <p class="food-sub">Comfort • Adjustable</p>
+
+  <div class="food-price">
+    <span class="new">₹799</span>
+  </div>
+
+  <button class="btn-add add-to-cart">Add to Cart</button>
+</article>
+
+<!-- Accessory 7 -->
+<article class="food-card"
+  data-id="a7"
+  data-title="Dog Shampoo - Anti Tick"
+  data-price="349"
+  data-img="https://m.media-amazon.com/images/I/61VwP0Jv7YL._SL1500_.jpg">
+
+  <button class="wish-btn" type="button">
+    <i class="fa-regular fa-heart"></i>
+  </button>
+
+  <div class="food-img">
+    <img src="https://i5.walmartimages.com/asr/3cf286a7-e975-47aa-80ea-ccc79fe5a58d.ed1d60ba4678fd80f5954342fbb203e2.jpeg" alt="Dog Shampoo">
+  </div>
+
+  <h3 class="food-title">Dog Shampoo - Anti Tick</h3>
+  <p class="food-sub">Fresh coat • Gentle</p>
+
+  <div class="food-price">
+    <span class="new">₹349</span>
+  </div>
+
+  <button class="btn-add add-to-cart">Add to Cart</button>
+</article>
+
+<!-- Accessory 8 -->
+  <article class="food-card"
+    data-id="a8"
+    data-title="Pet Grooming Brush"
+    data-price="259"
+    data-img="https://m.media-amazon.com/images/I/61i6qj2v0wL._SL1500_.jpg">
+
+    <button class="wish-btn" type="button">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <div class="food-img">
+      <img src="https://m.media-amazon.com/images/I/81UdNmoqWGL._AC_.jpg" alt="Grooming Brush">
+    </div>
+
+    <h3 class="food-title">Pet Shoes</h3>
+    <p class="food-sub">Easy comb • Smooth Walk</p>
+
+    <div class="food-price">
+      <span class="new">₹259</span>
+    </div>
+
+    <button class="btn-add add-to-cart">Add to Cart</button>
+  </article>
+
+  <!-- Accessory 9 -->
+  <article class="food-card"
+    data-id="a9"
+    data-title="Dog Bed - Soft Cushion"
+    data-price="1199"
+    data-img="https://m.media-amazon.com/images/I/71JXqM4xUWL._SL1500_.jpg">
+
+    <button class="wish-btn" type="button">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <div class="food-img">
+      <img src="https://doggiology.com/wp-content/uploads/2023/03/Dior-Designer-Dog-Sweater-Luxury-Sweaters-for-Dogs-Small-D-2.webp" alt="Dog Bed">
+    </div>
+
+    <h3 class="food-title">Stylish Dior Dog Sweater</h3>
+    <p class="food-sub">Cozy • Washable</p>
+
+    <div class="food-price">
+      <span class="new">₹1,199</span>
+    </div>
+
+    <button class="btn-add add-to-cart">Add to Cart</button>
+  </article>
+
+  <!-- Accessory 10 -->
+  <article class="food-card"
+    data-id="a10"
+    data-title="Pet Water Bottle"
+    data-price="299"
+    data-img="https://m.media-amazon.com/images/I/61eE7nY5gXL._SL1500_.jpg">
+
+    <button class="wish-btn" type="button">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <div class="food-img">
+      <img src="https://m.media-amazon.com/images/I/61WMBblLTpL._AC_SL1500_.jpg" alt="Pet Water Bottle">
+    </div>
+
+    <h3 class="food-title">Pet Soft Cloth</h3>
+    <p class="food-sub">Travel • Leakproof</p>
+
+    <div class="food-price">
+      <span class="new">₹299</span>
+    </div>
+
+    <button class="btn-add add-to-cart">Add to Cart</button>
+  </article>
+
+</div>
+<!-- 🔼 NEW ROW END -->
+
+
+<!-- 🔽 NEW ROW BELOW -->
+<div class="food-row">
+<!-- Accessory 11 -->
+<article class="food-card"
+  data-id="a11"
+  data-title="Dog Harness (No Pull)"
+  data-price="799"
+  data-img="https://m.media-amazon.com/images/I/71gQhZ5cVwL._SL1500_.jpg">
+
+  <button class="wish-btn" type="button">
+    <i class="fa-regular fa-heart"></i>
+  </button>
+
+  <div class="food-img">
+    <img src="https://m.media-amazon.com/images/I/710zLL8OKFL._AC_SL1500_.jpg" alt="Dog Harness">
+  </div>
+
+  <h3 class="food-title">2pk dog car seat belts</h3>
+  <p class="food-sub">Comfort • Adjustable</p>
+
+  <div class="food-price">
+    <span class="new">₹799</span>
+  </div>
+
+  <button class="btn-add add-to-cart">Add to Cart</button>
+</article>
+
+<!-- Accessory 12 -->
+<article class="food-card"
+  data-id="a12"
+  data-title="Dog Shampoo - Anti Tick"
+  data-price="349"
+  data-img="https://m.media-amazon.com/images/I/61VwP0Jv7YL._SL1500_.jpg">
+
+  <button class="wish-btn" type="button">
+    <i class="fa-regular fa-heart"></i>
+  </button>
+
+  <div class="food-img">
+    <img src="https://iheartdogs.com/wp-content/uploads/2023/08/8025861.jpg" alt="Dog Shampoo">
+  </div>
+
+  <h3 class="food-title">Dog Gel - Anti Tick</h3>
+  <p class="accessory-sub">Gentle Care • Daily Use</p>
+
+  <div class="food-price">
+    <span class="new">₹349</span>
+  </div>
+
+  <button class="btn-add add-to-cart">Add to Cart</button>
+</article>
+
+<!-- Accessory 13 -->
+  <article class="food-card"
+    data-id="a8"
+    data-title="Pet Grooming Brush"
+    data-price="259"
+    data-img="https://m.media-amazon.com/images/I/61i6qj2v0wL._SL1500_.jpg">
+
+    <button class="wish-btn" type="button">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <div class="food-img">
+      <img src="https://zeelabpharmacy.com/public/uploads/files/MW634542f8a4112.jpg" alt="Grooming Brush">
+    </div>
+
+    <h3 class="food-title">Pet Soaps</h3>
+    <p class="accessory-sub">Gentle Care • Daily Use</p>
+
+    <div class="food-price">
+      <span class="new">₹259</span>
+    </div>
+
+    <button class="btn-add add-to-cart">Add to Cart</button>
+  </article>
+
+  <!-- Accessory 14 -->
+  <article class="food-card"
+    data-id="a9"
+    data-title="Dog Bed - Soft Cushion"
+    data-price="1199"
+    data-img="https://m.media-amazon.com/images/I/71JXqM4xUWL._SL1500_.jpg">
+
+    <button class="wish-btn" type="button">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <div class="food-img">
+      <img src="https://m.media-amazon.com/images/I/81D4qBvRmTL._AC_SL1500_.jpg" alt="Dog Bed">
+    </div>
+
+    <h3 class="food-title">Stylish Dior Dog Sweater</h3>
+    <p class="food-sub">Cozy • Washable</p>
+
+    <div class="food-price">
+      <span class="new">₹1,199</span>
+    </div>
+
+    <button class="btn-add add-to-cart">Add to Cart</button>
+  </article>
+
+  <!-- Accessory 15 -->
+  <article class="food-card"
+    data-id="a10"
+    data-title="Pet Water Bottle"
+    data-price="299"
+    data-img="https://m.media-amazon.com/images/I/61eE7nY5gXL._SL1500_.jpg">
+
+    <button class="wish-btn" type="button">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <div class="food-img">
+      <img src="https://m.media-amazon.com/images/I/71rhfPptmJL._AC_SL1500_.jpg" alt="Pet Water Bottle">
+    </div>
+
+    <h3 class="food-title">Pet Brush</h3>
+    <p class="accessory-sub">Soft Bristles • For All Breeds</p>
+
+    <div class="food-price">
+      <span class="new">₹299</span>
+    </div>
+
+    <button class="btn-add add-to-cart">Add to Cart</button>
+  </article>
+
+</div>
+<!-- 🔼 NEW ROW END -->
+
+
+
+  
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<script src="product.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>
+
+
+
+

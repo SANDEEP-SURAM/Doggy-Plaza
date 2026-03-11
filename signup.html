@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup | Doggy Plaza</title>
+
+  <style>
+    body{
+      font-family:Arial, sans-serif;
+      background:#f3f4f6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      margin:0;
+    }
+    .card{
+      background:#fff;
+      padding:24px;
+      border-radius:16px;
+      width:360px;
+      box-shadow:0 10px 30px rgba(0,0,0,.1);
+    }
+    h2{text-align:center;margin-bottom:16px}
+    input{
+      width:100%;
+      padding:12px;
+      margin-bottom:12px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      font-size:14px;
+    }
+    button{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:12px;
+      background:#7c3aed;
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+    p{text-align:center;margin-top:12px;font-size:14px}
+    a{color:#7c3aed;text-decoration:none;font-weight:600}
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Signup</h2>
+
+  <input
+    type="text"
+    id="name"
+    placeholder="Enter your name"
+  />
+
+  <input
+    type="email"
+    id="email"
+    placeholder="Enter your email"
+  />
+
+  <button onclick="signup()">Signup</button>
+
+  <p>Already have an account?
+    <a href="login.html">Login</a>
+  </p>
+</div>
+
+<script>
+function signup(){
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  if(!name || !email || !email.includes("@")){
+    alert("Enter valid name and email");
+    return;
+  }
+
+  fetch("http://127.0.0.1:5000/api/send-otp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.ok){
+      localStorage.setItem("otp_email", email);
+      localStorage.setItem("otp_name", name);
+      window.location.href = "verify-otp.html";
+    } else {
+      alert(data.error);
+    }
+  })
+  .catch(() => alert("Server error"));
+}
+</script>
+
+</body>
+</html>

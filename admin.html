@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Orders</title>
+  <style>
+    body{font-family:Arial;margin:0;background:#f3f4f6}
+    .wrap{max-width:1200px;margin:24px auto;padding:0 14px}
+    .card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+    .top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .small{color:#6b7280;font-size:13px}
+    .stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .stat{background:#fafafa;border:1px solid #eee;border-radius:14px;padding:12px;min-width:170px}
+    .stat .k{color:#6b7280;font-size:12px}
+    .stat .v{font-weight:800;font-size:18px;margin-top:4px}
+    input{padding:10px 12px;border:1px solid #ddd;border-radius:12px;width:320px}
+    .btn{padding:10px 12px;border-radius:12px;background:#111827;color:#fff;border:none;cursor:pointer;font-weight:700}
+    .btn.gray{background:#374151}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px;border-bottom:1px solid #eee;text-align:left;font-size:14px;vertical-align:top}
+    th{background:#fafafa}
+    .items{display:flex;flex-direction:column;gap:8px}
+    .item{display:flex;gap:10px;border:1px solid #eee;border-radius:14px;padding:8px;background:#fff}
+    .item img{width:46px;height:46px;object-fit:cover;border-radius:12px;border:1px solid #eee}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px}
+    .pending{background:#fff7ed;color:#9a3412}
+    .confirmed{background:#eff6ff;color:#1d4ed8}
+    .delivered{background:#ecfdf5;color:#047857}
+    .cancelled{background:#fef2f2;color:#b91c1c}
+    select{padding:8px 10px;border:1px solid #ddd;border-radius:12px}
+    .danger{background:#dc2626}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="top">
+        <div>
+          <h2 style="margin:0">Admin Orders</h2>
+          <div class="small">Data from <code>/api/orders</code></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <input id="q" placeholder="Search name / phone / address..." />
+          <button class="btn" id="refreshBtn">Refresh</button>
+          <button class="btn gray" onclick="location.href='/'">Home</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="k">Total Orders</div><div class="v" id="stOrders">0</div></div>
+        <div class="stat"><div class="k">Total Revenue</div><div class="v" id="stRevenue">₹0</div></div>
+        <div class="stat"><div class="k">Pending</div><div class="v" id="stPending">0</div></div>
+        <div class="stat"><div class="k">Delivered</div><div class="v" id="stDelivered">0</div></div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Created</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Address</th>
+            <th>Items</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

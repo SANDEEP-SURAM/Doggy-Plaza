@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Doggy Plaza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Segoe UI, sans-serif;
+      background:#f4f6fb;
+    }
+    .box{
+      width:360px;
+      background:#fff;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 15px 30px rgba(0,0,0,.12);
+    }
+    h2{text-align:center;margin-bottom:15px;}
+    input{
+      width:100%;
+      padding:10px;
+      margin-bottom:12px;
+      border-radius:8px;
+      border:1px solid #ccc;
+    }
+    button{
+      width:100%;
+      padding:10px;
+      border:none;
+      border-radius:8px;
+      background:#7c3aed;
+      color:white;
+      cursor:pointer;
+    }
+    .switch{
+      text-align:center;
+      margin-top:10px;
+      font-size:14px;
+    }
+    .msg{text-align:center;margin-top:10px;font-size:14px;color:red;}
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Login</h2>
+
+  <input
+    id="email"
+    type="email"
+    placeholder="Enter your email"
+  >
+
+  <button onclick="login()">Login</button>
+
+  <div class="switch">
+    New user? <a href="signup.html">Signup</a>
+  </div>
+
+  <p id="msg" class="msg"></p>
+</div>
+
+<script>
+function login(){
+  const email = document.getElementById("email").value.trim();
+  const msg = document.getElementById("msg");
+
+  if(!email || !email.includes("@")){
+    msg.textContent = "Enter valid email";
+    return;
+  }
+
+  // Send OTP again for login
+  fetch("http://127.0.0.1:5000/api/send-otp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.ok){
+      localStorage.setItem("otp_email", email);
+      window.location.href = "verify-otp.html";
+    } else {
+      msg.textContent = data.error;
+    }
+  })
+  .catch(() => msg.textContent = "Server error");
+}
+</script>
+
+</body>
+</html>

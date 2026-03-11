@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wishlist - Doggy Plaza</title>
+
+  <link rel="stylesheet" href="wishlist.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <button class="back-btn" onclick="goBack()" type="button">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+    <a class="brand" href="index.html">🐾 <span>Doggy Plaza</span></a>
+
+    <div class="top-actions">
+      <a class="link active" href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+      <a class="link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="left">
+      <div class="title-row">
+        <h2>Your Wishlist</h2>
+        <button class="btn btn-outline" id="clearWishBtn" type="button">
+          <i class="fa-regular fa-trash-can"></i> Clear wishlist
+        </button>
+      </div>
+
+      <div id="wishList" class="list"></div>
+
+      <div class="footer-actions">
+        <a href="index.html" class="btn btn-outline">
+          <i class="fa-solid fa-arrow-left"></i> Continue shopping
+        </a>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="summary">
+        <h3>Wishlist Summary</h3>
+
+        <div class="row">
+          <span>Items</span>
+          <span id="wishItems">0</span>
+        </div>
+
+        <div class="row total">
+          <span>Estimated Total</span>
+          <span>₹<span id="wishTotal">0</span></span>
+        </div>
+
+        <button class="btn btn-primary" id="moveAllBtn" type="button">
+          Move All to Cart
+        </button>
+
+        <p class="note">*Demo wishlist using localStorage.</p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="store.js"></script>
+  <script src="wishlist.js"></script>
+  <script src="auth.js"></script>
+ l
+
+
+  <script>
+  function goBack(){
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>

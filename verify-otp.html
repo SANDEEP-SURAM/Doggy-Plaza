@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify OTP | Doggy Plaza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Segoe UI, sans-serif;
+      background: #f4f6fb;
+    }
+    .box {
+      width: 360px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 15px 30px rgba(0,0,0,.12);
+    }
+    h2 { text-align: center; margin-bottom: 15px; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #7c3aed;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .msg { text-align: center; margin-top: 10px; font-size: 14px; color: red; }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Verify OTP</h2>
+  <p style="text-align:center; font-size:14px; color:#555;">
+    OTP sent to your email
+  </p>
+
+  <input
+    type="text"
+    id="otp"
+    placeholder="Enter 6-digit OTP"
+    maxlength="6"
+  />
+
+  <button onclick="verifyOtp()">Verify</button>
+
+  <p id="msg" class="msg"></p>
+</div>
+
+<script>
+function verifyOtp() {
+  const otp = document.getElementById("otp").value.trim();
+  const email = localStorage.getItem("otp_email");
+  const msg = document.getElementById("msg");
+
+  if (!otp || otp.length !== 6) {
+    msg.textContent = "Enter valid 6-digit OTP";
+    return;
+  }
+
+  if (!email) {
+    msg.textContent = "Session expired. Please signup again.";
+    return;
+  }
+
+  fetch("http://127.0.0.1:5000/api/verify-otp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, otp })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.ok) {
+      localStorage.setItem("dp_user", JSON.stringify(data.user));
+      localStorage.removeItem("otp_email");
+      localStorage.removeItem("otp_name");
+      window.location.href = "index.html"; // redirect after login
+    } else {
+      msg.textContent = data.error;
+    }
+  })
+  .catch(() => msg.textContent = "Server error");
+}
+</script>
+
+</body>
+</html>
